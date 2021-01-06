@@ -1,9 +1,9 @@
-package com.unnyweather.android.ui.place
+package com.sunnyweather.android.ui.place
 
 import androidx.lifecycle.*
 
 import com.sunnyweather.android.logic.model.Place
-import com.unnyweather.android.logic.Repository
+import com.sunnyweather.android.logic.Repository
 
 class PlaceViewModel : ViewModel() {
 

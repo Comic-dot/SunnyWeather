@@ -4,7 +4,7 @@ import com.google.gson.annotations.SerializedName;
 
 import java.util.List;
 
-public class PlaceResponse {//实体类
+public class PlaceResponse {
     String status;
     List<Place> places;
 
@@ -26,4 +26,5 @@ public class PlaceResponse {//实体类
     }
 
 }
+
 

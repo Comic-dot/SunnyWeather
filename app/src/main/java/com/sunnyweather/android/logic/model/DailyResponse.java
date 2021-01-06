@@ -14,8 +14,8 @@ public class DailyResponse {
 
     }
     public static class Daily {
-        List<Temperature> temperatures;
-        List<Skycon> skycon;
+        public List<Temperature> temperature;
+        public List<Skycon> skycon;
         @SerializedName("life_index")
         public LifeIndex lifeIndex;
     }
@@ -34,6 +34,6 @@ public class DailyResponse {
         public List<LifeDescription> coldRisk;
         public List<LifeDescription> carWashing;
         public List<LifeDescription> ultraviolet;
-        public List<LifeDescription> derssing;
+        public List<LifeDescription> dressing;
     }
 }

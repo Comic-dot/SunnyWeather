@@ -1,6 +1,5 @@
-package com.unnyweather.android.logic
+package com.sunnyweather.android.logic
 
-import androidx.lifecycle.R
 import androidx.lifecycle.liveData
 import com.sunnyweather.android.logic.model.Weather
 import com.sunnyweather.android.logic.network.SunnyWeatherNetwork
