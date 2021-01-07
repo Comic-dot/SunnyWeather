@@ -3,6 +3,7 @@ package com.sunnyweather.android.ui.place
 import androidx.lifecycle.*
 
 import com.sunnyweather.android.logic.Repository
+import com.sunnyweather.android.logic.dao.PlaceDao
 import com.sunnyweather.android.logic.model.Place
 
 class PlaceViewModel : ViewModel() {
@@ -20,5 +21,10 @@ class PlaceViewModel : ViewModel() {
     }
 
 
+    fun savePlace(place: Place)=Repository.savePlace(place)
+
+    fun getSavedPlace()= PlaceDao.getSavedPlace()
+
+    fun isPlaceSaved()= PlaceDao.isPlacesSaved()
 
 }
