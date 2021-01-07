@@ -14,8 +14,10 @@ public class LoginInterfaceActivity extends AppCompatActivity {
         setContentView(R.layout.activity_login_interface);
     }
 
-    public void senf(View view) {
-        Intent intent = new Intent(LoginInterfaceActivity.this, MainActivity.class);
-        startActivity(intent);
+
+    public void signinClick(View view) {
+    }
+
+    public void registerClick(View view) {
     }
 }
