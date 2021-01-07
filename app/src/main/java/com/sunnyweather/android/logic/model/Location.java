@@ -1,6 +1,8 @@
 package com.sunnyweather.android.logic.model;
 
 public class Location {
+    String lng;
+    String lat;
     public String getLng() {
         return lng;
     }
@@ -22,6 +24,5 @@ public class Location {
         this.lat = lat;
     }
 
-    String lng;
-    String lat;
+
 }
