@@ -16,6 +16,7 @@ public class LoginInterfaceActivity extends AppCompatActivity {
 
 
     public void signinClick(View view) {
+
     }
 
     public void registerClick(View view) {
