@@ -9,6 +9,8 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.EditText;
 import android.widget.Toast;
 
@@ -18,6 +20,9 @@ public class RegisterActivity extends AppCompatActivity {
     private MyDBHelper dbHelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        this.requestWindowFeature(Window.FEATURE_NO_TITLE);//去掉标题栏
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);//去掉信息栏
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
         dbHelper = new MyDBHelper(this,"UserStore.db",null,1);
@@ -28,15 +33,15 @@ public class RegisterActivity extends AppCompatActivity {
     }
 
     public void ButtonClick_2(View view) {
-        EditText editText3 = (EditText) findViewById(R.id.account_1);
-        EditText editText4 = (EditText) findViewById(R.id.password_1);
-        String newname = editText3.getText().toString();
-        String password = editText4.getText().toString();
-        if (CheckIsDataAlreadyInDBorNot(newname)) {
+        EditText Text = findViewById(R.id.account_1);
+        EditText Text1 =  findViewById(R.id.password_1);
+        String name = Text.getText().toString();
+        String password = Text1.getText().toString();
+        if (CheckIsDataAlreadyInDBorNot(name)) {
             Toast.makeText(this, "该用户名已被注册，注册失败", Toast.LENGTH_SHORT).show();
         } else {
-            if (register(newname, password)) {
-                Toast.makeText(this, "插入数据表成功", Toast.LENGTH_SHORT).show();
+            if (register(name, password)) {
+                Toast.makeText(this, "注册成功", Toast.LENGTH_SHORT).show();
             }
         }
     }
